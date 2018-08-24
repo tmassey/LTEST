@@ -1,24 +1,27 @@
 ﻿using System;
+using System.Threading;
+using LTest.Core.Interfaces;
 
 namespace LTest.Core.Logic
 {
     public class DummyLoadTest : LoadTest
     {
-        public override void BeforeTest()
-        {
+       public override void BeforeTest()
+        {            
             base.BeforeTest();
-            Console.WriteLine("Before Dummy Test!!!");
+            Console.Write("B");
         }
 
         public override void Execute()
         {
-            Console.WriteLine("Dummy Load Test Ran");
+            Console.Write("#");
+            //Thread.Sleep(100);
         }
 
         public override void AfterTest()
-        {
+        {            
             base.AfterTest();
-            Console.WriteLine("After Dummy Test!!!");
+            Console.Write("A");
         }
     }
 }
