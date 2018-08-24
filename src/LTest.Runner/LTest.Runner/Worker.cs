@@ -35,9 +35,7 @@ namespace LTest.Runner
                 foreach (var foundType in types)
                 {
                     if (foundType.BaseType == null || (foundType.BaseType.FullName != "LTest.Core.Logic.LoadTest" ||
-                                                       !foundType.FullName.Contains(strFullyQualifiedName))) continue;
-                    //var assymbly= AppDomain.CurrentDomain.Load(File.ReadAllBytes(foundType.Assembly.Location));
-                    //var file = new FileInfo(foundType.Assembly.Location);
+                                                       !foundType.FullName.Contains(strFullyQualifiedName))) continue;                  
                     return Activator.CreateInstance(foundType) as ILoadTest;
                 }
             }
