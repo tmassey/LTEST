@@ -14,6 +14,6 @@ namespace LTest.Runner.Actions
 
         [Option('d', "delay", Required = false, HelpText = "This is the pram for delay between requests (Default: 0ms)", Default = 0)]
         public int Delay { get; set; }
-
+       
     }
 }

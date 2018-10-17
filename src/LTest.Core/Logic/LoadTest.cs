@@ -8,15 +8,17 @@ using LTest.Core.Interfaces;
 namespace LTest.Core.Logic
 {
     public abstract class LoadTest:ILoadTest
-    {       
+    {
+        public virtual string TestName { get; } = "BASE";
+
         public virtual void BeforeTest()
         {
-            Console.Write("<");
+            
         }
 
         public virtual void AfterTest()
         {
-            Console.Write(">");
+            
         }
 
         public abstract void Execute();

@@ -2,7 +2,7 @@
 {
     public interface ILoadTest
     {
-        //string TestName { get; }
+        string TestName { get; }
         void BeforeTest();
         void AfterTest();
         void Execute();

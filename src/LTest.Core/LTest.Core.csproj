@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RestSharp, Version=106.3.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,10 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\ILoadTest.cs" />
-    <Compile Include="Logic\DummyLoadTest.cs" />
+    <Compile Include="Logic\Caller.cs" />
+    <Compile Include="Logic\GetBaseAllChurchesLoadTest.cs" />
+    <Compile Include="Logic\GetBaseChurchesLoadTest.cs" />
+    <Compile Include="Logic\ICaller.cs" />
     <Compile Include="Logic\LoadTest.cs" />
+    <Compile Include="Logic\RequesterException.cs" />
+    <Compile Include="Logic\RequesterResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
