@@ -37,7 +37,7 @@
     <Reference Include="ColorConsole, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ColorConsole.1.0.1\lib\net40\ColorConsole.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine, Version=2.3.0.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
+    <Reference Include="CommandLine">
       <HintPath>..\..\packages\CommandLineParser.2.3.0\lib\net45\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -91,6 +91,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\LTest.Core.Tests\LTest.Core.Tests.csproj">
+      <Project>{56b7e071-fe07-402d-81e5-86cb89dc50b9}</Project>
+      <Name>LTest.Core.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\LTest.Core\LTest.Core.csproj">
       <Project>{4FA61223-548E-4EF1-ABC8-4BDF44B48253}</Project>
       <Name>LTest.Core</Name>

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using CommandLine;
 using LTest.Runner.Actions;
 using LTest.Runner.Interfaces;
-using Terminal.Gui;
+
 
 namespace LTest.Runner
 {
@@ -14,14 +15,7 @@ namespace LTest.Runner
     {
         private static readonly List<Assembly> _assymblies = new List<Assembly>();
         private static RunnerOptions _options;
-        private static Button _runButton;
-        private static Button _fileBrowserButton;
-        private static Window _win;
-        private static TextField _txtPath;
-        private static TextField _txtTimesToRun;
-        private static TextField _txtDelay;
-        private static Label _statusLabel;
-
+   
         private static TimeSpan _totalTestTime;
         private static bool _anyFailures;
         private static readonly List<string> _failedTests = new List<string>();
